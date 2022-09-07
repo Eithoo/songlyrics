@@ -1,26 +1,8 @@
-<!-- URLs  -->
-
-[repo]: https://github.com/vookav2/songlyrics
-[issues]: https://github.com/vookav2/songlyrics/issues
-[nodejs]: https://nodejs.org/
-[codefactor]: https://www.codefactor.io/repository/github/vookav2/songlyrics
-[npm]: https://www.npmjs.com/package/songlyrics
-[versions]: https://www.npmjs.com/package/songlyrics?activeTab=versions
-[buymeacoffee]: https://www.buymeacoffee.com/daphinokio
-[saweria]: https://saweria.co/daphino
-[mailto]: mailto:davinomoehdanino@gmail.com
-
 # songlyrics
 
 Search a lyrics. It scrapes the lyrics from unofficial sources.
 
-[![Donate](https://img.shields.io/badge/donate-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)][buymeacoffee]
-[![Donate](https://img.shields.io/badge/SAWERIA-faae2b?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)][saweria]
-
-[![Codefactor](https://www.codefactor.io/repository/github/vookav2/songlyrics/badge)][codefactor]
-[![Latest version](https://img.shields.io/npm/v/songlyrics?color=%2335C757)][versions]
-[![Monthly downloads](https://img.shields.io/npm/dm/songlyrics)][npm]
-
+**THIS IS A FORK. GO TO [@vookav2/songlyrics](https://github.com/vookav2/songlyrics) FOR ORIGINAL CODE.**
 <details>
   <summary>Table of contents</summary>
   <ol>
@@ -50,9 +32,6 @@ Search a lyrics. It scrapes the lyrics from unofficial sources.
        <a href="#disclaimer">Disclaimer</a>
      </li>
     <li>
-       <a href="#support">Support</a>
-     </li>
-    <li>
        <a href="#license">License</a>
      </li>
   </ol>
@@ -69,14 +48,9 @@ Search a lyrics. It scrapes the lyrics from unofficial sources.
 
 ### Installation
 
-- NPM
-  ```sh
-  npm install songlyrics
-  ```
-- Yarn
-  ```sh
-  yarn add songlyrics
-  ```
+```sh
+npm install Eithoo/songlyrics
+```
 
 ## Usage
 
@@ -84,16 +58,81 @@ Import functions that you need.
 
 ```ts
 import songlyrics from 'songlyrics'
-const response = await songlyrics('one more light')
+const lyrics = songlyrics.default;
 
-// with artist name
-const response = await songlyrics('one more light linkin park')
+const response = await songlyrics('Something Special Pop Smoke')
 ```
 
 ### Output
-
 <details>
-<summary>Lyrics</summary>
+<summary>Example</summary>
+
+```js
+{
+  title: 'Pop Smoke - Something Special Lyrics',
+  lyrics: 'I think you are (You are) something special\n' +
+    "I'll take you on a shopping spree (Oh, yeah)\n" +
+    "'Cause I'm so into you (Oh)\n" +
+    "I'm so into you (I love you, baby)\n" +
+    "I'm so into you (Oh, my)\n" +
+    "I'm so into you (To you), baby (Baby)\n" +
+    '\n' +
+    'What you like? What you wear?\n' +
+    'Say the name, say the price, put them diamonds on your ear\n' +
+    "Shinin' like a chandelier\n" +
+    "What's your thoughts? What's your fears?\n" +
+    "Yeah, I need that real love (Real love), talkin' Bobby and Whitney (Whitney)\n" +
+    "You don't gotta worry 'bout nothin' as long as you with me (With me, look)\n" +
+    "'Cause shit could get sticky, that's why I keep a glizzy\n" +
+    'Ride around through my city (Woo)\n' +
+    'Fuck Cassandra, Kanesha, Kaneeka and Tisha, Lisa and Tricia (Fuck them hoes, uh)\n' +
+    "Fuck them hoes 'cause I don't need them, all them bitches treeshas\n" +
+    "They ain't in the field, they on the bleachers (Treeshas)\n" +
+    'On your back, I start applying that lotion (Yeah, lotion)\n' +
+    "So deep, I'ma go in, pullin' all on your sew-in (Sew-in)\n" +
+    "I'm Pop Smoke, but you know all my governments\n" +
+    "All that gangster shit, she be lovin' it\n" +
+    "She love how I'm thuggin' it (Oh, you like that)\n" +
+    'Shawty brown and petite (Yeah)\n' +
+    'Fly and discreet, a demon in the sheets\n' +
+    'Mother was a lawyer, her father the police\n' +
+    'They be working long hours, so she always had the free\n' +
+    'She said I could come with her if it get hot up in the streets\n' +
+    "'Cause I'm a 'rilla in the jungle and a shark up in the sea\n" +
+    'She like, "Papi, you so fire, but get up out the streets"\n' +
+    `I'm like, "Baby, what you mean?" (What you mean?)\n` +
+    'Look\n' +
+    '\n' +
+    'I think (Baby) you are\n' +
+    'You are (You are) something special (My girl)\n' +
+    "I'll take you on a shopping spree\n" +
+    "'Cause I'm so into you (To you)\n" +
+    "I'm so into you (You are)\n" +
+    "I'm so into you\n" +
+    "I'm so into you, baby (Baby)\n" +
+    '\n' +
+    'Baby (Baby)\n' +
+    'You are (You are) my girl (My girl)\n' +
+    'You are (You are) my girl\n' +
+    '\n' +
+    '(I think) You are (You are)\n' +
+    'You are (You are) something special (Oh, yeah)\n' +
+    "I'll take you on a shopping spree (Oh, baby)\n" +
+    "'Cause I'm so into you (Baby)\n" +
+    "I'm so into you (You are)\n" +
+    "I'm so into you (My girl)\n" +
+    "I'm so into you (You are), baby (My girl)",
+  source: {
+    name: 'Genius',
+    url: 'genius.com',
+    link: 'https://genius.com/Pop-smoke-something-special-lyrics'
+  }
+}
+```
+
+</details>
+<details>
+<summary>model</summary>
 <p>
 
 ```js
@@ -114,15 +153,10 @@ const response = await songlyrics('one more light linkin park')
 
 Contributions, issues and feature requests are welcome. Feel free to check [issues][issues] page if you want to contribute.
 
-## Support
-
-Give a 🌟 [star][repo] if this project is useful to you.
 
 ## Disclaimer
 
 This project is not affiliated with, endorsed, or sponsored by YouTube or any of their affiliates or subsidiaries. All trademarks, logos and brand names are the property of their respective owners, and are used only to directly describe the services being provided, as such, any usage of trademarks to refer to such services is considered nominative use.
-
-Should you have any questions or concerns please contact me directly via [email][mailto].
 
 ## License
 
