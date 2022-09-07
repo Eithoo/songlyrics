@@ -11,8 +11,7 @@
     "dev": "ts-node-dev --respawn --cls --transpile-only --poll ./src/index.ts",
     "build": "rimraf ./build && tsc",
     "pretty": "prettier --write .",
-    "lint": "eslint . --ext .ts",
-    "prepare": "husky install"
+    "lint": "eslint . --ext .ts"
   },
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
@@ -21,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/vookav2/songlyrics"
+    "url": "https://github.com/Eithoo/songlyrics"
   },
   "author": "mr687 <davinomoehdanino@gmail.com>",
   "license": "MIT",
@@ -38,21 +37,11 @@
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^8.0.1",
     "lint-staged": "^12.4.1",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
     "ts-node-dev": "^1.1.8",
     "tsc-files": "^1.1.3",
     "typescript": "^4.4.3"
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "yarn eslint",
-      "yarn prettier --write"
-    ],
-    "**/*.ts": [
-      "tsc-files --noEmit"
-    ]
   }
 }
