@@ -8,7 +8,7 @@ coverage
 __tests__
 
 # production
-build
+#build
 dist
 dump
 
